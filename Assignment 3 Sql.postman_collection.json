@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "daf4e29b-c16b-40fc-93d6-d3d53bd58270",
+		"name": "Assignment 3 Sql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34113326"
+	},
+	"item": [
+		{
+			"name": "add_member",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"Name\":\"Alaa\",\r\n \"NationalId\":\"30200005\",\r\n \"PhoneNumber\":123,\r\n\"MembershipFrom\": \"2024-05-1\",\r\n\"MembershipTo\": \"2025-05-10\", \r\n \"MembershipCost\":3000,\r\n \"Status\":\"Active\",  \r\n \"TrainerId\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/members/add_member",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"members",
+						"add_member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update member",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"PhoneNumber\":12,\r\n   \"Nmae\":\"Ahmed\",\r\n   \"MembershipFrom\":\"2024-5-13\",\r\n   \"MembershipTo\":\"2025-5-13\",\r\n   \"MembershipCost\":\"3500\",\r\n   \"TrainerId\":5\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/members/update_member",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"members",
+						"update_member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific member",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Phone_Number\":12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/members/get_member_byphonenumber",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"members",
+						"get_member_byphonenumber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Revenues Member",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/members/get_revenues",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"members",
+						"get_revenues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Members With them Trainers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/members/get_members_with_trainers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"members",
+						"get_members_with_trainers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_member",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PhoneNumber\":123\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/members/delete_member",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"members",
+						"delete_member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_trainer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"Name\":\"Ahmeddddd\",\r\n    \"DurationFrom\":\"2024-05-1\",\r\n    \"DurationTo\":\"2026-5-2\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trainers/add_trainer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trainers",
+						"add_trainer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update trainer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"oldname\":\"ziad\",\r\n    \"Name\":\"ziad\",\r\n    \"DurationFrom\":\"2023-5-1\",\r\n    \"DurationTo\":\"2025-5-1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trainers/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trainers",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific Trainer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"Alaaaaa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trainers/get_specificTrainer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trainers",
+						"get_specificTrainer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Revenuse Trainer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"Mohamed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trainers/get_revenuse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trainers",
+						"get_revenuse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Trainers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/trainers/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trainers",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_trainer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"ziiad\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trainers/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trainers",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

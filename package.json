@@ -1,0 +1,20 @@
+{
+  "name": "ahmed-alaa-fri-tue-assument-3-01143002809",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.7",
+    "nodemon": "^3.1.0"
+  }
+}
